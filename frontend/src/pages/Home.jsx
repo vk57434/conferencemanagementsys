@@ -98,13 +98,116 @@ export default function Home() {
 
   if (!isAdmin && !isReviewer && !isAuthor && !isParticipant) {
   return (
-    <div className="bg-white p-6 rounded shadow-md max-w-3xl mx-auto mt-10">
-      <h1 className="text-3xl font-bold mb-3 text-center">
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20 px-6">
+          <div className="max-w-6xl mx-auto text-center">
+            <div className="mb-6 animate-fade-in">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
         Conference Management System
       </h1>
-      <p className="text-gray-700 text-center">
-          Welcome{userName ? `, ${userName}` : ''}! Use the navigation to explore the system.
-        </p>
+              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Streamline your academic conference workflow with our comprehensive management platform
+              </p>
+            </div>
+          </div>
+          
+          {/* Decorative elements */}
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-300 rounded-full blur-3xl"></div>
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <h2 className="text-4xl font-bold text-center mb-4 text-gray-800">
+            Everything You Need
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">
+            A complete solution for managing academic conferences
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Feature Card 1 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Paper Submission</h3>
+              <p className="text-gray-600">
+                Submit your research papers with ease. Track submission status and receive real-time updates.
+              </p>
+            </div>
+
+            {/* Feature Card 2 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Peer Review</h3>
+              <p className="text-gray-600">
+                Comprehensive review system with detailed feedback, ratings, and recommendation tracking.
+              </p>
+            </div>
+
+            {/* Feature Card 3 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Schedule Management</h3>
+              <p className="text-gray-600">
+                Organize sessions, assign chairs, and manage conference schedules efficiently.
+              </p>
+            </div>
+
+            {/* Feature Card 4 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+              <div className="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Secure Payments</h3>
+              <p className="text-gray-600">
+                Integrated payment processing for conference registration fees with secure transactions.
+              </p>
+            </div>
+
+            {/* Feature Card 5 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">User Management</h3>
+              <p className="text-gray-600">
+                Role-based access control for Authors, Reviewers, Participants, and Administrators.
+              </p>
+            </div>
+
+            {/* Feature Card 6 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Analytics Dashboard</h3>
+              <p className="text-gray-600">
+                Real-time statistics and insights for administrators to monitor conference progress.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
