@@ -61,7 +61,7 @@ export default function Register() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
-        <h2 className="text-3xl font-bold text-center text-blue-700 mb-6">
+        <h2 className="text-3xl font-bold text-center text-red-700 mb-6">
           Create an Account
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
