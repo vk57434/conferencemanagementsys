@@ -19,7 +19,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "*", // Allow all origins for development (adjust in production)
+  origin: "https://conferencemanagementsys.vercel.app", // Allow all origins for development (adjust in production)
   credentials: true
 }));
 app.use(express.json());
